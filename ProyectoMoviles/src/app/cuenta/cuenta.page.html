@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Personas que desean adoptar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let cuenta of cuentas">
+      <ion-item>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="cardItems">
+              {{cuenta.Nombre}}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="cardItems">
+            Tiene {{cuenta.NumPerros}} perros y {{cuenta.Patio}} tiene patio.
+          </ion-card-content>
+
+        </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="onAgregarCuenta()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="cuenta">
+    <ion-icon name="person-add"></ion-icon>
+    <ion-label>Formulario</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink='/movimientos'>
+    <ion-icon name="images"></ion-icon>
+    <ion-label>Galería</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink='/resumen'>
+    <ion-icon name="camera"></ion-icon>
+    <ion-label>Encontré un perro</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink='/resumen'>
+    <ion-icon name="flashlight"></ion-icon>
+    <ion-label>Alumbra tu Mascota</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

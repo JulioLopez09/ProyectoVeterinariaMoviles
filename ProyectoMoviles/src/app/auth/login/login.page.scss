@@ -1,0 +1,66 @@
+ion-item{
+    --background: ##15D0B3;
+    --color: #fff;
+    --border-color: #F4F3EF;
+}
+
+ion-input{
+    font-family: 'Nunito';
+    --placeholder-color: white; 
+    --placeholder-opacity: 100;
+
+}
+
+ion-button{
+    --background: white;
+    --opacity: 100;	
+    font-family: 'Nunito';
+    font-weight: 900;
+    color: #15D0B3;
+}
+
+.divButton {
+    padding-top: 20px;
+    text-align: center;
+}
+:host {
+    .item-interactive.ion-invalid{
+     --highlight-background: white !important;
+   }
+   .item-interactive.ion-valid{
+     --highlight-background: white !important;
+   }
+ }
+ h1 {
+    font-family: 'Nunito';
+    font-weight: 1000;
+    color: white;
+    font-size: 50pt;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+h3{
+    color: white;
+    font-weight: bold;
+    font-family: 'Nunito';
+    font-size: 16pt;
+}
+a{
+    color: #fff;
+    text-align: center;
+    align-content: center;
+}
+.fondo {
+    background-color: #15D0B3;
+}
+p{
+    color: #fff;
+    font-family: 'Nunito';
+}
+
+.registroText {
+    color:#15D0B3;
+    width:50%;
+    margin: 0 auto;
+    text-align: center;
+}
