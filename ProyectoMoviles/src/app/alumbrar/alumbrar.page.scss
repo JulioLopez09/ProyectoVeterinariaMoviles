@@ -5,13 +5,10 @@ ion-title{
     font-size: 18pt;
 }
 
-ion-fab-button{
-    --color: white;
-}
-
-ion-list{
-    padding-top: 0;
-    padding-bottom: 0;
+ion-img{
+    width: 100px;
+    height: 100px;
+    justify-content: center;
 }
 
 ion-item{
@@ -23,11 +20,18 @@ ion-item{
 div{
     background-color: inherit;
     border: 0px;
+    justify-content: center;
   }
 
+ion-card{
+    width: 100% !important;
+  }
 
-
-.cardItems{
+  .cardItems{
     color: #fff;
     --background:  #fff;
+}
+
+.centered{
+    justify-content: center;
 }

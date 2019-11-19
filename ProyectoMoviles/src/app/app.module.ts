@@ -12,6 +12,7 @@ import { RegistrarPage } from './auth/registrar/registrar.page';
 import { LoginPage } from './auth/login/login.page';
 import { StorageServiceModule } from 'ngx-webstorage-service';
 
+
 @NgModule({
   declarations: [AppComponent, RegistrarPage, LoginPage],
   entryComponents: [],

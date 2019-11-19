@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Alumbra tu mascota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" padding>
+  <div class="centered">
+    <ion-img src="assets/gifs/carrot.gif"> </ion-img>
+  </div>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button routerLink="/cuenta">
+    <ion-icon name="person-add"></ion-icon>
+    <ion-label>Formulario</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink='/movimientos'>
+    <ion-icon name="images"></ion-icon>
+    <ion-label>Galería</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink='/resumen'>
+    <ion-icon name="camera"></ion-icon>
+    <ion-label>Encontré un perro</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink='/alumbrar'>
+    <ion-icon name="flashlight"></ion-icon>
+    <ion-label>Alumbra tu Mascota</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

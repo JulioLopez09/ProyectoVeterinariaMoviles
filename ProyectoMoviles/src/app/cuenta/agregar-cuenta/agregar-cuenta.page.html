@@ -20,17 +20,17 @@
                             <ion-item>
                                 <ion-input formControlName="nombre" type="text" placeholder="¿Nombre?"
                                     [(ngModel)]="Nombre"></ion-input>
-                                <div color="error" *ngIf="f.nombre.errors">*</div>
+                                <div color="black" *ngIf="f.nombre.errors">*</div>
                             </ion-item>
                             <ion-item>
                                 <ion-input formControlName="numPerros" type="number" placeholder="¿Número de Perros?"
                                     [(ngModel)]="NumPerros"></ion-input>
-                                <div color="error" *ngIf="f.cantidad.errors">*</div>
+                                <div color="black" *ngIf="f.numPerros.errors">*</div>
                             </ion-item>
                             <ion-item>
                                 <ion-input formControlName="patio" type="text" placeholder="¿Tiene patio?"
                                     [(ngModel)]="Patio"></ion-input>
-                                <div color="error" *ngIf="f.cantidad.errors">*</div>
+                                <div color="black" *ngIf="f.patio.errors">*</div>
                             </ion-item>
                         </div>
                         <div class="divButton">

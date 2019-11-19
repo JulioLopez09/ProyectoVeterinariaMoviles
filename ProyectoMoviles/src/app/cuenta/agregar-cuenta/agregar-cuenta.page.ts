@@ -2,10 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { ModalController, AlertController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Cuenta } from 'src/app/model/cuenta';
-import { CuentaService } from '../cuenta.service';
-import { Router } from '@angular/router';
-import { StorageService, LOCAL_STORAGE } from 'ngx-webstorage-service';
-import { Usuario } from 'src/app/model/usuario';
+
 
 @Component({
     selector: 'app-agregar-cuenta',
@@ -21,10 +18,7 @@ export class AgregarCuentaPage implements OnInit {
     constructor(
         private modalController: ModalController,
         private formBuilder: FormBuilder,
-        private cuentaService: CuentaService,
-        private router: Router,
         private alertController: AlertController,
-        @Inject(LOCAL_STORAGE) private storage: StorageService
     ) {
         this.registrarForm = this.formBuilder.group({
             nombre: ['', Validators.required],
@@ -52,24 +46,5 @@ export class AgregarCuentaPage implements OnInit {
         this.modalController.dismiss();
     }
 
-
-    async error(error: string) {
-        const alert = await this.alertController.create({
-            header: 'Alert',
-            subHeader: 'Error',
-            message: error,
-            buttons: [{
-                text: 'Aceptar',
-                handler: () => {
-                    this.registrarForm.controls.nombre.setErrors(Validators.required);
-                    this.registrarForm.controls.cantidad.setErrors(Validators.required);
-                }
-            }]
-        });
-
-
-
-        await alert.present();
-    }
 
 }
