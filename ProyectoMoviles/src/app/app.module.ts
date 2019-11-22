@@ -10,7 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginPage } from './auth/login/login.page';
 import { Flashlight } from '@ionic-native/flashlight/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
   declarations: [AppComponent, LoginPage],
@@ -25,6 +26,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     Flashlight,
     StatusBar,
     Geolocation,
+    Camera,
+    File,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

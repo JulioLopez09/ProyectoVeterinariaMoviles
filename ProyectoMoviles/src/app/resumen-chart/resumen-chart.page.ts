@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @Component({
   selector: 'app-resumen-chart',
@@ -11,8 +12,10 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 export class ResumenChartPage implements OnInit {
 
   public locations;
-  public dogs;
-  constructor(private geolocation: Geolocation) { }
+
+  photos: any = [];
+
+  constructor(private geolocation: Geolocation, public camera: Camera, public file: File) { }
 
   ngOnInit() {
     this.locations = [
@@ -21,6 +24,24 @@ export class ResumenChartPage implements OnInit {
     ];
   }
 
+  TakePhotos() {
+    var options: CameraOptions = {
+      quality: 100,
+      mediaType: this.camera.MediaType.PICTURE,
+      destinationType: this.camera.DestinationType.FILE_URI,
+      encodingType: this.camera.EncodingType.JPEG
+    }
+    this.camera.getPicture().then((imagedata) => {
+      let filename = imagedata.substring(imagedata.lastIndexOf('/') + 1);
+      let path = imagedata.substring(0, imagedata.lastIndexOf('/') + 1);
+      this.file.readAsDataURL(path, filename).then((base64data) => {
+
+
+
+        this.photos.push(base64data)
+      })
+    })
+  }
 
   locate() {
     this.geolocation.getCurrentPosition().then((resp) => {

@@ -14,11 +14,11 @@ export class CuentaPage implements OnInit {
 
   ngOnInit() {
     this.cuentas = [
+      { Nombre: 'Julio López', NumPerros: 1, Patio: 'Sí' },
+      { Nombre: 'Andrés Alexis', NumPerros: 5, Patio: 'No' },
       { Nombre: 'Jesús Uresti', NumPerros: 2, Patio: 'Sí' },
       { Nombre: 'Marco Hernández', NumPerros: 1, Patio: 'No' },
       { Nombre: 'José Santiago', NumPerros: 0, Patio: 'Sí' },
-      { Nombre: 'Julio López', NumPerros: 1, Patio: 'Sí' },
-      { Nombre: 'Andrés Alexis', NumPerros: 5, Patio: 'No' }
     ];
   }
 
