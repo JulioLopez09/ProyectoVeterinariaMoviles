@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ModalController, AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Cuenta } from 'src/app/model/cuenta';
 
 
 @Component({
@@ -11,14 +10,12 @@ import { Cuenta } from 'src/app/model/cuenta';
 })
 export class AgregarCuentaPage implements OnInit {
 
-    titulo: string;
     registrarForm: FormGroup;
-    cuenta: Cuenta;
+
 
     constructor(
         private modalController: ModalController,
         private formBuilder: FormBuilder,
-        private alertController: AlertController,
     ) {
         this.registrarForm = this.formBuilder.group({
             nombre: ['', Validators.required],

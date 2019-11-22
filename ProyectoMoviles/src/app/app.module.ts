@@ -7,10 +7,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { LoginPage } from './auth/login/login.page';
-import { StorageServiceModule } from 'ngx-webstorage-service';
 import { Flashlight } from '@ionic-native/flashlight/ngx';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 
 @NgModule({
   declarations: [AppComponent, LoginPage],
@@ -20,13 +20,11 @@ import { Flashlight } from '@ionic-native/flashlight/ngx';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    // tslint:disable-next-line: deprecation
-    StorageServiceModule
   ],
   providers: [
     Flashlight,
     StatusBar,
+    Geolocation,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

@@ -6,6 +6,19 @@
 
 <ion-content color="primary" padding>
 
+  <ion-button (click)="locate()"> Locate </ion-button>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let location of locations">
+      <ion-item>
+        <ion-card>
+          {{location.Latitude}}<br />
+          {{location.Longitude}}<br />
+          <img src="{{location.img}}" />
+        </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>
 
