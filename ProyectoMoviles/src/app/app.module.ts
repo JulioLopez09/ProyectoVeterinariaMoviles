@@ -8,13 +8,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RegistrarPage } from './auth/registrar/registrar.page';
 import { LoginPage } from './auth/login/login.page';
 import { StorageServiceModule } from 'ngx-webstorage-service';
-
+import { Flashlight } from '@ionic-native/flashlight/ngx';
 
 @NgModule({
-  declarations: [AppComponent, RegistrarPage, LoginPage],
+  declarations: [AppComponent, LoginPage],
   entryComponents: [],
   imports: [BrowserModule,
     IonicModule.forRoot(),
@@ -26,6 +25,7 @@ import { StorageServiceModule } from 'ngx-webstorage-service';
     StorageServiceModule
   ],
   providers: [
+    Flashlight,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

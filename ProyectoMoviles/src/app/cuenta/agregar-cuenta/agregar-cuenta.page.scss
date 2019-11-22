@@ -1,12 +1,12 @@
 ion-title{
-    --color: white;
-    font-family: 'Nunito';
+    --color: #ffd662;
+    font-family: 'Muli';
     font-weight: bold;
     font-size: 18pt;
 }
 
 ion-item{
-    --background: #15D0B3;
+    --background: #00539C;
     --color: #fff;
     --border-color: white;
 }
@@ -14,28 +14,28 @@ ion-item{
 ion-input{
     --placeholder-color: white; 
     --placeholder-opacity: 100;
-    font-family: 'Nunito';
+    font-family: 'Muli';
 }
 
 .botonCerrar{
     --background: white;
-    --opacity: 100;	
+    --opacity: 100;
     font-weight: 800;
-    color: #15D0B3;
-    font-family: 'Nunito';
+    color: #1a64a6;
+    font-family: 'Muli';
 }
 
 ion-button{
     --background: white;
     --opacity: 100;	
     font-weight: 800;
-    color: #15D0B3;
-    font-family: 'Nunito';
+    color: #1a64a6;
+    font-family: 'Muli';
 }
 
 h3{
     color: white;
-    font-family: 'Nunito';
+    font-family: 'Muli';
     font-weight: 900;
 }
 

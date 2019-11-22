@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Flashlight } from '@ionic-native/flashlight/ngx';
 
 @Component({
   selector: 'app-alumbrar',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlumbrarPage implements OnInit {
 
-  constructor() { }
+  constructor(private flashlight: Flashlight) { }
 
   ngOnInit() {
+  }
+
+  switchFlashlight(evento) {
+
+    let power: boolean = evento.target.checked;
+
+
+    if (power == true) {
+      this.flashlight.switchOn();
+      console.log('Prender');
+    }
+    else {
+      this.flashlight.switchOff();
+      console.log('Apagar');
+    }
   }
 
 }

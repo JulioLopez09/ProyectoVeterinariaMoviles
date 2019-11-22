@@ -1,58 +1,88 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Movimientos</ion-title>
+    <ion-title>Galería</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content color="primary" padding>
-  <ion-list inset="full">
-    <ion-item-sliding *ngFor="let movimiento of movimientos">
-      <ion-item class="ion-no-padding">
-        <ion-card>
-          <ion-grid class="cardItems">
-            <ion-row>
-              <ion-col>
-                <div class="descripcion">{{movimiento.Descripcion}}</div>
-              </ion-col>
-              <ion-col>
-                <div class="cuenta">{{movimiento.Cuenta}}</div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div class="etiqueta">{{movimiento.Etiqueta}}</div>
-              </ion-col>
-              <ion-col>
-                <div class="cantidad">${{movimiento.Cantidad}}</div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
 
-        </ion-card>
-      </ion-item>
-    </ion-item-sliding>
-  </ion-list>
+<ion-content color="primary" class="card-background-page" padding>
+  <ion-card tappable (click)="reproducirChachalaca()">
+    <img src='/assets/imgs/chachalaca.jpeg' />
+    <div class="card-title">Chachalaca</div>
+    <div class="card-subtitle">
+      <p>Ortalis policephala</p>
+      <p>Bayas, brotes, frutos</p>
+      <p>Zonas tropicales y mesetas templadas</p>
+    </div>
+  </ion-card>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="abrirModal()">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <br />
+
+  <ion-card tappable (click)="reproducirTigre()">
+    <img src='/assets/imgs/tigre.jpeg' />
+    <div class="card-title">Tigre de Bengala</div>
+    <div class="card-subtitle">
+      <p>Panthera tigris tigris</p>
+      <p>Jabalís, ciervos y búfalos</p>
+      <p>Bosques tropicales, bosques perennifolios y praderas</p>
+    </div>
+  </ion-card>
+
+  <br />
+
+  <ion-card tappable (click)="reproducirMono()">
+    <img src='/assets/imgs/monoArdilla.jpeg' />
+    <div class="card-title">Mono Ardilla</div>
+    <div class="card-subtitle">
+      <p>Saimiri sciureus</p>
+      <p>Frutas, bayas, nueces y flores</p>
+      <p>Bosques tropicales y áreas cultivadas</p>
+    </div>
+  </ion-card>
+
+  <br />
+
+  <ion-card tappable (click)="reproducirBoa()">
+    <img src='/assets/imgs/boaConstrictor.jpeg' />
+    <div class="card-title">Boa constrictor</div>
+    <div class="card-subtitle">
+      <p>Boa constrictor</p>
+      <p>Aves y mamíferos</p>
+      <p>Bosques tropicales, pantanos y tierras calientes</p>
+    </div>
+  </ion-card>
+
+  <br />
+
+  <ion-card tappable (click)="reproducirCacomixtle()">
+    <img src='/assets/imgs/cacomixtle.jpeg' />
+    <div class="card-title">Cacomixtle Tropical</div>
+    <div class="card-subtitle">
+      <p>Bassariscus astutus</p>
+      <p>insectos, roedores y vegetales</p>
+      <p>Áreas rocosas cerca del agua</p>
+    </div>
+  </ion-card>
 
 </ion-content>
 
 <ion-tab-bar slot="bottom">
   <ion-tab-button routerLink='/cuenta'>
-    <ion-icon name="card"></ion-icon>
-    <ion-label>Cuentas</ion-label>
+    <ion-icon name="person-add"></ion-icon>
+    <ion-label>Formulario</ion-label>
   </ion-tab-button>
 
-  <ion-tab-button tab="movimientos">
-    <ion-icon name="apps"></ion-icon>
-    <ion-label>Movimientos</ion-label>
+  <ion-tab-button routerLink='/movimientos'>
+    <ion-icon name="images"></ion-icon>
+    <ion-label>Galería</ion-label>
   </ion-tab-button>
 
   <ion-tab-button routerLink='/resumen'>
-    <ion-icon name="send"></ion-icon>
-    <ion-label>Resumen</ion-label>
+    <ion-icon name="camera"></ion-icon>
+    <ion-label>Encontré un perro</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button routerLink='/alumbrar'>
+    <ion-icon name="flashlight"></ion-icon>
+    <ion-label>Alumbra tu Mascota</ion-label>
   </ion-tab-button>
 </ion-tab-bar>

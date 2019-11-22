@@ -1,12 +1,12 @@
 ion-title{
-    --color: white;
-    font-family: 'Nunito';
+    --color: #ffd662;
+    font-family: 'Muli';
     font-weight: bold;
     font-size: 18pt;
 }
 
 ion-fab-button{
-    --color: white;
+    --color: #ffd662;
 }
 
 ion-list{
@@ -15,9 +15,8 @@ ion-list{
 }
 
 ion-item{
-    --background: #15D0B3;
+    --background: #00539C;
     --color: #fff;
-    --border-color: white;
 }
 
 div{
@@ -25,9 +24,13 @@ div{
     border: 0px;
   }
 
-
+  ion-card{
+    width: 100% !important;
+    --background: #1a64a6;
+  }
 
 .cardItems{
     color: #fff;
     --background:  #fff;
+    font-family: 'Muli';
 }

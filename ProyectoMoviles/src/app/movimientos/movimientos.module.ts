@@ -6,8 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { MovimientosPage } from './movimientos.page';
-import { AgregarMovimientoPage } from './agregar-movimiento/agregar-movimiento.page';
-import { AgregarMovimientoPageModule } from './agregar-movimiento/agregar-movimiento.module';
 
 const routes: Routes = [
   {
@@ -18,7 +16,6 @@ const routes: Routes = [
 
 @NgModule({
   entryComponents: [
-    AgregarMovimientoPage
   ],
 
   imports: [
@@ -26,7 +23,6 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    AgregarMovimientoPageModule
   ],
   declarations: [MovimientosPage]
 })

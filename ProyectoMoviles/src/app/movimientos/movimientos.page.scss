@@ -1,55 +1,35 @@
 ion-title{
-    --color: white;
-    font-family: 'Nunito';
+    --color: #ffd662;
+    font-family: 'Muli';
     font-weight: bold;
     font-size: 18pt;
 }
 
-ion-list{
-    padding-top: 0;
-    padding-bottom: 0;
-}
+.card-background-page{
+    ion-card{
+        position: relative;
+        text-align: center;
+    }
+    
+    .card-title{
+        position: absolute;
+        top: 10%;
+        font-size: 2.0em;
+        width: 100%;
+        font-family: 'Muli';
+        font-weight: bold;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
-ion-item{
-    --background: #15D0B3;
-    --color: #fff;
-}
+    }
 
-ion-card{
-    width: 100% !important;
-  }
-
-
-.cardItems{
-    color: #fff;
-    --background:  #fff;
-}
-ion-button{
-    --background: white;
-    --opacity: 100;	
-    font-weight: 900;
-    color: #15D0B3;
-}
-ion-fab-button{
-    --color: white;
-}
-
-.descripcion{
-    font-family: 'Nunito';
-    font-size: 15pt;
-}
-
-.cuenta{
-    font-family: 'Nunito';
-    font-size: 11pt;
-}
-
-.etiqueta{
-    font-family: 'Nunito';
-    font-size: 13pt;
-}
-
-.cantidad{
-    font-family: 'Nunito';
-    font-size: 14pt;
+    .card-subtitle{
+        font-size: 1.2em;
+        position: absolute;
+        top: 30%;
+        width: 100%;
+        color: white;
+        font-family: 'Rubik';
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
 }

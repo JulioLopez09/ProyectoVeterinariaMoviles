@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { AgregarMovimientoPage } from '../movimientos/agregar-movimiento/agregar-movimiento.page';
-import { OverlayEventDetail } from '@ionic/core';
+
 
 @Component({
   selector: 'app-movimientos',
@@ -10,88 +8,50 @@ import { OverlayEventDetail } from '@ionic/core';
 })
 export class MovimientosPage implements OnInit {
 
-  public movimientos;
-
-
-
-  constructor(private modalController: ModalController) { }
+  constructor() { }
 
   ngOnInit() {
-    this.movimientos = [
-      {
-        Descripcion: '7-Eleven Papitas',
-        Cantidad: '-18.00',
-        Tipo: '2',
-        Cuenta: 'Crédito Banorte',
-        Etiqueta: 'Comida'
-      },
-      {
-        Descripcion: 'Pago agua',
-        Cantidad: '-360.00',
-        Tipo: '2',
-        Cuenta: 'Crédito Banorte',
-        Etiqueta: 'Hogar'
-      },
-      {
-        Descripcion: 'Quincena',
-        Cantidad: '+7,500.00',
-        Tipo: '2',
-        Cuenta: 'Débito Banregio',
-        Etiqueta: 'Sueldo'
-      },
-      {
-        Descripcion: 'Colegiatura',
-        Cantidad: '-2,500.00',
-        Tipo: '2',
-        Cuenta: 'Débito Banamex',
-        Etiqueta: 'Educación'
-      },
-      {
-        Descripcion: 'Pago Cuota Interna',
-        Cantidad: '-3650.00',
-        Tipo: '2',
-        Cuenta: 'Débito Banregio',
-        Etiqueta: 'Educación'
-      }
 
-    ];
-    /*this.movimientos = [
-      {
-        descripcion: '7-Eleven',
-        cantidad: '-18',
-        tipo: '2', //1 - Ingreso, 2 - Egreso
-        cuenta: {
-          nombre: 'Crédito Banorte',
-          id: 1
-        },
-        etiqueta: {
-          id: 1,
-          descripcion: 'Comida'
-        },
-        fecha: '2019-11-08'
-      }
-
-    ];*/
   }
 
-  async abrirModal() {
-    console.log(this.movimientos);
-    const modal = await this.modalController.create({
-      component: AgregarMovimientoPage,
-      componentProps: { Descripcion: null, Cantidad: null, Tipo: null, Cuenta: null, Etiqueta: null },
-    });
+  reproducirChachalaca() {
+    let sonido = new Audio();
 
-    modal.onDidDismiss().then((data) => {
-      if (data['data'] != null) {
-        console.log(data);
-        this.movimientos.push(data['data']);
+    sonido.src = '/assets/sounds/chachalaca.mp3';
+    sonido.load();
+    sonido.play();
+  }
 
-      }
+  reproducirTigre() {
+    let sonido = new Audio();
 
-    });
+    sonido.src = '/assets/sounds/tigre.mp3';
+    sonido.load();
+    sonido.play();
+  }
 
+  reproducirMono() {
+    let sonido = new Audio();
 
-    return await modal.present();
+    sonido.src = '/assets/sounds/monoArdilla.mp3';
+    sonido.load();
+    sonido.play();
+  }
+
+  reproducirBoa() {
+    let sonido = new Audio();
+
+    sonido.src = '/assets/sounds/boaConstrictor.mp3';
+    sonido.load();
+    sonido.play();
+  }
+
+  reproducirCacomixtle() {
+    let sonido = new Audio();
+
+    sonido.src = '/assets/sounds/cacomixtle.mp3';
+    sonido.load();
+    sonido.play();
   }
 
 
