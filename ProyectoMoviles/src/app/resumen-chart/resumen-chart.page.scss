@@ -5,20 +5,57 @@ ion-title{
     font-size: 18pt;
 }
 
+ion-button{
+    --background: #1a64a6;
+}
+
 ion-icon{
     color: #1a64a6;
 }
 
+ion-list{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 ion-card{
     width: 100% !important;
+    --background: #1a64a6;
+
   }
 
-  
-.centered{
-    text-align: center;
+  .local{
+    font-family: 'Muli';
+    font-weight: 700;
+    font-size: 13pt;
+  }
+
+.center {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 250px;
+    height: 200px;
+    border-radius: 25px;
 }
 
 .whitelabel{
     color: white;
+    font-family: 'Muli';
+}
+
+.cardItems{
+    color: #fff;
+    font-family: 'Muli';
+    padding-left: 20px;
+}
+
+.iniciarText {
+    color:#00539C;;
+    width:50%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 900;
     font-family: 'Nunito';
 }

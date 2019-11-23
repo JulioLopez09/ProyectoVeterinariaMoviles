@@ -6,16 +6,16 @@
 
 <ion-content color="primary" padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let cuenta of cuentas">
+    <ion-item-sliding *ngFor="let persona of personas">
       <ion-item>
         <ion-card>
           <ion-card-header>
             <ion-card-title class="cardItems">
-              {{cuenta.Nombre}}
+              {{persona.Nombre}}
             </ion-card-title>
           </ion-card-header>
           <ion-card-content class="cardItems">
-            Tiene {{cuenta.NumPerros}} perros y {{cuenta.Patio}} tiene patio.
+            Tiene {{persona.NumPerros}} perros y {{persona.Patio}} tiene patio.
           </ion-card-content>
 
         </ion-card>

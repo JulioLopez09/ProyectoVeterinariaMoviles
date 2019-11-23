@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AgregarCuentaPage } from './agregar-cuenta/agregar-cuenta.page';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+
 
 @Component({
   selector: 'app-cuenta',
@@ -9,11 +11,13 @@ import { AgregarCuentaPage } from './agregar-cuenta/agregar-cuenta.page';
 })
 export class CuentaPage implements OnInit {
 
-  public cuentas;
-  constructor(public modalController: ModalController) { }
+  public personas;
+  constructor(public modalController: ModalController, private statusbar: StatusBar) {
+    this.statusbar.backgroundColorByHexString("#00539C");
+  }
 
   ngOnInit() {
-    this.cuentas = [
+    this.personas = [
       { Nombre: 'Julio López', NumPerros: 1, Patio: 'Sí' },
       { Nombre: 'Andrés Alexis', NumPerros: 5, Patio: 'No' },
       { Nombre: 'Jesús Uresti', NumPerros: 2, Patio: 'Sí' },
@@ -26,12 +30,12 @@ export class CuentaPage implements OnInit {
     const modal = await this.modalController.create({
       component: AgregarCuentaPage,
       componentProps: {
-        titulo: 'Agregar Cuenta'
+        titulo: 'Agregar Persona'
       }
     });
     modal.onDidDismiss().then((data) => {
       if (data['data'] != null) {
-        this.cuentas.push(data['data']);
+        this.personas.push(data['data']);
       }
 
     });

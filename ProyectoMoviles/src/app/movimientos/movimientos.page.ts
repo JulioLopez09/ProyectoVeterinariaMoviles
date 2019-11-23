@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 
 @Component({
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovimientosPage implements OnInit {
 
-  constructor() { }
+  constructor(private statusbar: StatusBar) {
+    this.statusbar.backgroundColorByHexString("#00539C");
+
+  }
 
   ngOnInit() {
 

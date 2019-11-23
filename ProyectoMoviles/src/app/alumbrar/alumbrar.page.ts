@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Flashlight } from '@ionic-native/flashlight/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+
 
 @Component({
   selector: 'app-alumbrar',
@@ -8,7 +10,9 @@ import { Flashlight } from '@ionic-native/flashlight/ngx';
 })
 export class AlumbrarPage implements OnInit {
 
-  constructor(private flashlight: Flashlight) { }
+  constructor(private flashlight: Flashlight, private statusbar: StatusBar) {
+    this.statusbar.backgroundColorByHexString("#00539C");
+  }
 
   ngOnInit() {
   }
@@ -20,11 +24,9 @@ export class AlumbrarPage implements OnInit {
 
     if (power == true) {
       this.flashlight.switchOn();
-      console.log('Prender');
     }
     else {
       this.flashlight.switchOff();
-      console.log('Apagar');
     }
   }
 

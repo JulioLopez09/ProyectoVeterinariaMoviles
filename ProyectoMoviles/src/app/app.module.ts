@@ -28,6 +28,7 @@ import { File } from '@ionic-native/file/ngx';
     Geolocation,
     Camera,
     File,
+    StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

@@ -6,24 +6,19 @@
 
 <ion-content color="primary" padding>
 
-  <div class="ion-padding">
-    <ion-button (click)="TakePhotos()" expand="full" color="primary">Take Photos</ion-button>
-    <ion-list *ngFor="let photo of photos">
-      <ion-item>
-        <img src={{photo}} style="width:200px; height:150px;">
-      </ion-item>
-    </ion-list>
-  </div>
-
-  <ion-button (click)="locate()"> Locate </ion-button>
-
+  <ion-button size="large" type="submit" fill="solid" color="light" shape="round" expand="block" (click)="TakePhotos()">
+    <p class="iniciarText">Tomar Foto</p>
+  </ion-button>
   <ion-list>
     <ion-item-sliding *ngFor="let location of locations">
-      <ion-item>
-        <ion-card>
-          {{location.Latitude}}<br />
-          {{location.Longitude}}<br />
-          <img src="{{location.img}}" />
+      <ion-item color="primary">
+        <ion-card class="cardItems">
+          <p class="local">Localización:</p>
+          Latitud: {{location.Latitude}}<br />
+          Longitud: {{location.Longitude}}
+
+          <img src="{{location.img}}" class="center" />
+          <br />
         </ion-card>
       </ion-item>
     </ion-item-sliding>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class LoginPage {
 
-  constructor() {
+  constructor(private statusbar: StatusBar) {
+    this.statusbar.backgroundColorByHexString("#00539C");
   }
 
   ngOnInit() {

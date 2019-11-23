@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 
 @Component({
@@ -16,12 +17,14 @@ export class AgregarCuentaPage implements OnInit {
     constructor(
         private modalController: ModalController,
         private formBuilder: FormBuilder,
+        private statusbar: StatusBar
     ) {
         this.registrarForm = this.formBuilder.group({
             nombre: ['', Validators.required],
             numPerros: ['', [Validators.required]],
             patio: ['', [Validators.required]]
         });
+        this.statusbar.backgroundColorByHexString("#00539C");
     }
 
     Nombre: string;
